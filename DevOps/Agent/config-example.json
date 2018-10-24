@@ -1,0 +1,31 @@
+{
+  // The URL of the Azure DevOps account
+  // Example: "https://dev.azure.com/kirkone/"
+  "accounturl": "https://dev.azure.com/ACCOUNTNAME/",
+  // The pool name where to add the agents
+  // A pool with that name must exist
+  "pool": "Awesome-Pool",
+  // This prefix will be added to every agent name
+  // Example agent name: Awesome-Agent-01
+  // This value is optional and can be empty
+  "agentprefix": "Awesome-Agent",
+  // A list of strings
+  // Every entry represents the name of one agent
+  // Double entrys will be ignored
+  "agents": [
+    "01",
+    "02"
+  ],
+  // Every agent gets it own working folder with the name
+  // of the agent without the prefix
+  // This sould be a very short path to minimize the risk
+  // of too long Paths
+  // Example working folder result: "C:/W/01/"
+  "workfolder": "C:\\W",
+  // Every agent is placed in that directoty with the full
+  // agent name as an folder
+  // Example agent folder result: "C:/Agents/Awesome-Agent-01/"
+  "agentsfolder": "C:\\Agents",
+  // The user account for running the agents as a service
+  "windowslogonaccount": "DOMAIN\\AgentUser"
+}
